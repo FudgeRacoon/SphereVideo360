@@ -1,0 +1,39 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "Compile C++",
+            "command": "C:\\Mingw64\\bin\\g++.exe",
+            "args": [
+                "-w",
+                "-g",
+                "${workspaceFolder}\\Source\\EntryPoint.cpp",
+                "${workspaceFolder}\\Source\\Private\\*.cpp",
+                "-o",
+                "${workspaceFolder}\\Binaries\\${workspaceFolderBasename}.exe",
+                "-L${workspaceFolder}\\Lib",
+                "-I${workspaceFolder}\\Vendor",
+                "-I${workspaceFolder}\\Source\\Public",
+                "-lglew32",
+                "-lglfw3dll", 
+                "-lavcodec",
+                "-lavformat",
+                "-lavutil",
+                "-lswscale",
+                "-lopengl32"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Compiles a C++ Project using g++"
+        }
+    ]
+}
